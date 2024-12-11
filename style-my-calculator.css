@@ -1,0 +1,53 @@
+.calcContainer {
+    border: solid blue;
+    margin: 6em;
+    /* height: 66vh; */
+  }
+  .calScreen {
+    border: solid black;
+    height: 44px;
+    margin: 1em;
+  }
+  .numPad {
+    border: solid grey;
+    display: flex;
+    /* height: 44vh; */
+    margin: 1em;
+    align-items: center;
+  }
+  .numOnly {
+    /* border: solid peru; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+  .operators {
+    /* border: solid lightblue; */
+    width: 20%;
+  }
+  .additionalOps {
+    border: solid salmon;
+    margin: 1em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .opSym {
+    border: solid navy;
+    text-align: center;
+    margin-top: 12%;
+    margin: 8px;
+    border-radius: 2px;
+  }
+  .numbKey {
+    border: solid grey;
+    width: 50px;
+    height: auto;
+    margin:2.6px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .numbKey:hover, .opSym:hover{
+      -webkit-box-shadow: 1px 2px 16px -1px #330DFF; 
+      box-shadow: 1px 2px 16px -1px #330DFF;
+  }
