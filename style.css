@@ -1,38 +1,38 @@
+/* The entire website backgound */
 body {
     background-color: lightblue;
-}
-
-.atmContainer {
+  }
+  
+  /* The entire ATM Div */
+  .atmContainer {
     border: solid black;
     margin: 2em;
     background-color: lightslategrey;
-}
-
-.atmTitle {
+  }
+  
+  /* The ATM Title Div */
+  .atmTitle {
     font-size: 98px;
     text-align: center;
     color: blue;
     border: solid white;
     border-width: 8px;
-}
-
-.atmBody {
-    /* border:solid blue ; */
+  }
+  /* The ATM screen area Div */
+  .atmBody {
     display: flex;
     padding: 10px;
-    /* height:41vh; */
-    margin: .2em;
-}
-
-.btnLeftContainer {
+    margin: 0.2em;
+    background-color:dimgrey;
+  }
+  
+  /* The ATM left area that has the 3 choice buttons Div */
+    .btnLeftContainer, .btnRightContainer {
     width: 20%;
-}
-
-.btnRightContainer {
-    width: 20%;
-}
-
-.screen {
+  }
+  
+  /* The ATM screen that contains the actual display area of text DIV */
+  .screen {
     border: solid white;
     color: lemonchiffon;
     border-radius: 22px;
@@ -41,138 +41,144 @@ body {
     width: 100%;
     padding: 2em;
     background-color: black;
-}
-
-.btnSelector {
-    margin: .4em;
+  }
+  
+  /* The 3 function button to the left of the ATM screen DIV */
+    .btnSelector {
+    margin: 0.4em;
     margin-top: 6vh;
     text-align: center;
     border: solid black;
     color: white;
     background-color: #333C3F;
-}
-
-.btnSelector:hover {
-    margin: .2em;
-    margin-top: 6vh;
-    text-align: center;
-    border: solid black;
-    color: white;
+  }
+  
+  .btnSelector:hover {
     background-color: green;
-}
-
-.keyPad {
+  }
+  
+  .keyPad {
     border: solid black;
-    /* height:42vh; */
-}
-
-.rowOne {
-    /* border:solid green; */
+  }
+  
+  /* Four rows of button on the number keypad DIV */
+    .rowOne {
     margin: 2em;
     height: 30px;
     display: flex;
     justify-content: space-evenly;
-}
-
-.keys {
-    border: solid black;
-    border-radius: 12px;
-    width: 80px;
-    color: white;
-    background-color: #333C3F;
-    font-size: 22px;
-    text-align: center;
-}
-
-.keys:hover {
-    border: solid black;
-    border-radius: 12px;
-    width: 80px;
-    color: yellow;
-    background-color: #333C3F;
-    font-size: 22px;
-    text-align: center;
-}
-
-.cardSlot {
-    border: solid black;
-    background-color: green;
-    margin: 3em;
-    text-align: center;
-    color: white;
-}
-
-.cardSlot:hover {
-    border: solid black;
-    background-color: #333C3F;
-    margin: 3em;
-    text-align: center;
-    color: white;
-}
-
-.scrn2 {
-    border: solid white;
-    height: 155px;
-    font-size: 15px;
-    width: 100%;
-    text-align: center;
-    color:white;
-    /*padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;*/
-    overflow-wrap: break-word;
-    /* margin-top: 50%; */
-}
-
-.scrn3 {
-    border: solid grey;
-    margin-top: 6%;
-    height: 55px;
-    width: 100%;
-}
-
-.balContainer {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.mainDisplay {
-    /* display:flex; */
-    width: 60%;
-    justify-content: space-evenly;
-
-
-}
-
-.leftOptions,
-.rightOptions {
-    /* border:solid blue; */
-    width: 20%;
-    /* display:flex; */
-}
-
-.selexD,
-.selexW,
-.selexC {
-    margin-top: 25%;
-    border: solid white;
-    height: 44px;
-    
-}
-
-
-.selexE,
-.selexS,
-.selexR {
-    margin-top: 25%;
-    border: solid white;
-    height: 44px;
+    /*background-color: blue;*/
+  }
   
-}
-
-.larr,
-.rarr {
+  /* All the keys on the number keypad DIV */
+  .keys {
+    border: solid black;
+    border-radius: 12px;
+    width: 80px;
+    color: white;
+    background-color: #333C3F;
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .keys:hover {
+    color: yellow;
+  }
+  
+  /* The ATM card slot below the number keypad Div */
+    .cardSlot {
+    border: solid black;
+    /*background-color: green;*/
+    background-color: red;
+    margin: 3em;
+    text-align: center;
+    color: white;
+  }
+  
+  .cardSlot:hover {
+    background-color: #333C3F;
+  }
+  
+/* The actual display area of the ATM screen DIV */
+.scrn2 {
+    height: 200px; 
+    font-size: 25px; 
+    line-height: 1.6; 
     width: 100%;
-    height: 100%;
-}
+    text-align: center; 
+    color: white;
+    padding: 10px; 
+    overflow-wrap: break-word; 
+    white-space: pre-line; 
+    overflow-y: auto;     
+  }
+    
+/* The cash display area for deposit and withdrawal of the ATM screen DIV */
+.thinSlot {
+    width: 80%;
+    height: 40px; 
+    margin: 15px auto 0; 
+    background-color: black;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+/* the div that Style for the cash */
+.cash {
+    width: 120px;
+    height: 60px;
+    background-color: green;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: -70px; /* Hide initially below the slot */
+    opacity: 0; /* lets keep it hidden initially */
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+/* Keyframe Cash animation for DEPOSIT (comes from outside ATM and goes inside the ATM) */
+@keyframes cashIn {
+    0% {
+      bottom: -70px; /* Start hidden below the slot */
+      opacity: 0;
+    }
+    50% {
+      bottom: 0; /* Move up into the slot */
+      opacity: 1;
+    }
+    100% {
+      bottom: -40px; /* Inside the machine */
+      opacity: 0;
+    }
+  }
+  
+/* Keyframe Cash animation for WITHDRAW (comes from inside ATM and goes outside the ATM) */
+@keyframes cashWithdraw {
+    0% {
+      bottom: -70px; /* Start hidden below the slot */
+      opacity: 0;
+    }
+    30% {
+      bottom: 0; /* Visible at the slot */
+      opacity: 1;
+    }
+    70% {
+      bottom: 50px; /* Moves visibly out of the slot */
+      opacity: 1;
+    }
+    100% {
+      bottom: -120px; /* Slides down and disappears below the machine */
+      opacity: 0;
+    }
+  }

@@ -1,82 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="atmContainer">
-      <div class="atmTitle">ATM</div>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATM Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- ATM Entire ATM View -->
+  <div class="atmContainer">
+    <div class="atmTitle">ATM</div>
+
+      <!-- ATM display area -->
       <div class="atmBody">
         <div class="btnLeftContainer">
-          <div class="btnSelector" onclick="">Deposit</div>
-          <div class="btnSelector">Withdraw</div>
-          <div class="btnSelector" onclick="">Check Bal</div>
-        </div>
-
-        <div class="screen">
-          <div class="leftOptions">
-            <div class="selexD"></div>
-            <div class="selexW"> </div>
-            <div class="selexC"></div>
-          </div>
-          <div class="mainDisplay">
-            <div class="scrn2"></div>
-          <div class="scrn3"></div>
-          </div>
-          <div class="rightOptions">
-            <div class="selexE"></div>
-            <div class="selexS"></div>
-            <div class="selexR"></div>
-          </div>
-        </div>
-
-        <div class="btnRightContainer">
-          <div class="btnSelector" onclick="">Enter PIN</div>
-          <div class="btnSelector">Switch Acct.</div>
-          <div class="btnSelector">Return</div>
-        </div>
-      </div>
-      <hr />
-      <div class="balContainer">
-        <p class="acctn">Checking Account:</p>
-        <p class="acctn">Savings Account:</p>
+        <div class="btnSelector" onclick="deposit()">Deposit</div>
+        <div class="btnSelector" onclick="withdraw()">Withdraw</div>
+        <div class="btnSelector" onclick="checkBalance()">Check Balance</div>
       </div>
 
-      <div class="keyPad">
-        <div class="rowOne">
-          <div onclick="findMyVal(event)" class="keys">1</div>
-          <div onclick="findMyVal(event)" class="keys">2</div>
-          <div onclick="findMyVal(event)" class="keys">3</div>
+      <!-- ATM screen area -->
+      <div class="screen">
+        <div class="mainDisplay">
+          <div class="scrn2" id="display">Welcome! Please Insert Card.</div>
         </div>
-
-        <div class="rowOne">
-          <div onclick="findMyVal(event)" class="keys">4</div>
-          <div onclick="findMyVal(event)" class="keys">5</div>
-          <div onclick="findMyVal(event)" class="keys">6</div>
-        </div>
-
-        <div class="rowOne">
-          <div onclick="findMyVal(event)" class="keys">7</div>
-          <div onclick="findMyVal(event)" class="keys">8</div>
-          <div onclick="findMyVal(event)" class="keys">9</div>
-        </div>
-
-        <div class="rowOne">
-          <div onclick="clearATMScreen()" class="keys">CLR</div>
-          <div onclick="findMyVal(event)" class="keys">0</div>
-          <div onclick="OnNumPadEnter()" class="keys">ENTER</div>
-        </div>
-
-        <div class="cardSlot" onclick="">Insert Card</div>
       </div>
     </div>
+  
+    <hr />
 
-    <script src="app.js"></script>
-  </body>
+    <!-- Number Keypad area below the atm screen -->
+    <div class="keyPad">
+      <div class="rowOne">
+        <div onclick="findMyVal(event)" class="keys">1</div>
+        <div onclick="findMyVal(event)" class="keys">2</div>
+        <div onclick="findMyVal(event)" class="keys">3</div>
+      </div>
+      <div class="rowOne">
+        <div onclick="findMyVal(event)" class="keys">4</div>
+        <div onclick="findMyVal(event)" class="keys">5</div>
+        <div onclick="findMyVal(event)" class="keys">6</div>
+      </div>
+      <div class="rowOne">
+        <div onclick="findMyVal(event)" class="keys">7</div>
+        <div onclick="findMyVal(event)" class="keys">8</div>
+        <div onclick="findMyVal(event)" class="keys">9</div>
+      </div>
+      <div class="rowOne">
+        <div onclick="clearATMScreen()" class="keys">CLR</div>
+        <div onclick="findMyVal(event)" class="keys">0</div>
+        <div onclick="OnNumPadEnter()" class="keys">ENTER</div>
+      </div>
+      <div class="cardSlot" onclick="toggleCard()">Insert Card</div>
+      <div class="thinSlot"> 
+        <div class="cash" id="cash"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
 </html>
